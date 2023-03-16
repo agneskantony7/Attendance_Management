@@ -47,13 +47,13 @@ def calculate_working_days(employee_data):
 # Create a connection to the Postgres database
     conn = psycopg2.connect(
         host="localhost",
-        database="*****",
-        user="*****",
-        password="******"
+        database="",
+        user="",
+        password=""
     )
 
     # Create a table in the database
-    engine = create_engine('postgresql+psycopg2://postgres:******@localhost:5432/********')
+    engine = create_engine('postgresql+psycopg2://postgres:password@localhost:5432/database')
     df.to_sql(name='working_days', con=engine, if_exists='replace', index=False)
 
     # Close the database connection
